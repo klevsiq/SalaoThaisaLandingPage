@@ -978,13 +978,10 @@
         font-family: var(--serif);
         font-style: italic;
         font-size: 0.9rem;
-        line-height: 1.65;
+        line-height: 1.7;
         color: rgba(245, 239, 228, 0.76);
         flex: 1;
         margin-bottom: 20px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        flex: 1;
       }
       .t-top {
         display: flex;
@@ -1663,89 +1660,6 @@
       }
 
 
-      /* ── MOBILE STICKY CTA ── */
-      .mobile-cta {
-        display: none;
-        position: fixed;
-        bottom: 0; left: 0; right: 0;
-        z-index: 300;
-        background: #25D366;
-        padding: 14px 20px;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        text-decoration: none;
-        box-shadow: 0 -4px 24px rgba(0,0,0,0.35);
-      }
-      .mobile-cta span {
-        font-family: var(--sans);
-        font-size: 0.94rem;
-        font-weight: 600;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #fff;
-      }
-      @media (max-width: 768px) {
-        .mobile-cta { display: flex; }
-      }
-
-
-      /* ── BLOCO DE DOR ── */
-      .pain-block {
-        background: var(--ink2);
-        border-top: 1px solid rgba(198,169,106,0.15);
-        border-bottom: 1px solid rgba(198,169,106,0.15);
-        padding: 72px 8%;
-      }
-      .pain-inner {
-        max-width: 760px;
-        margin: 0 auto;
-      }
-      .pain-intro {
-        font-family: var(--serif);
-        font-size: 1.05rem;
-        font-style: italic;
-        color: rgba(245,239,228,0.5);
-        margin-bottom: 32px;
-        font-weight: 300;
-        letter-spacing: 0.01em;
-      }
-      .pain-list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 40px;
-      }
-      .pain-list li {
-        font-size: 0.95rem;
-        font-weight: 300;
-        color: rgba(245,239,228,0.75);
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
-        line-height: 1.6;
-        padding-bottom: 16px;
-        border-bottom: 1px solid rgba(198,169,106,0.06);
-      }
-      .pain-list li span {
-        color: var(--gold);
-        opacity: 0.5;
-        font-size: 1rem;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
-      .pain-close {
-        font-family: var(--serif);
-        font-size: 1.25rem;
-        font-weight: 400;
-        color: var(--cream);
-        line-height: 1.5;
-      }
-      .pain-close em {
-        font-style: italic;
-        color: var(--gold);
-      }
 
 
       /* ── PROFISSIONAL ── */
@@ -1806,47 +1720,9 @@
         height: 100%;
         object-fit: cover;
       }
-      .prof-photo-placeholder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        opacity: 0.2;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        padding: 24px;
-      }
-      .prof-photo-placeholder svg { color: var(--gold); }
-      .prof-photo-placeholder p {
-        font-size: 0.96rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--gold);
-        font-family: var(--sans);
-      }
       .prof-content {
         order: 2;
         text-align: left;
-      }
-      .prof-photo {
-        position: relative;
-        background: var(--ink3);
-        border-right: 1px solid rgba(198,169,106,0.12);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-      }
-      .prof-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        filter: brightness(0.9) saturate(0.92);
       }
       .prof-photo-placeholder {
         display: flex;
@@ -1946,84 +1822,6 @@
           flex-direction: column;
           align-items: flex-start;
         }
-      }
-      .produtos-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 3px;
-      }
-      .prod-card {
-        background: var(--ink2);
-        border: 1px solid rgba(198,169,106,0.15);
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        transition: border-color 0.3s;
-      }
-      .prod-card:hover { border-color: rgba(198,169,106,0.2); }
-      .prod-photo {
-        aspect-ratio: 1/1;
-        background: var(--ink3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-      }
-      .prod-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(0.85) saturate(0.9);
-        transition: transform 0.6s var(--ease);
-      }
-      .prod-card:hover .prod-photo img { transform: scale(1.05); }
-      .prod-photo-placeholder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        opacity: 0.2;
-        width: 100%;
-        height: 100%;
-        padding: 24px;
-        text-align: center;
-      }
-      .prod-photo-placeholder svg { color: var(--gold); }
-      .prod-photo-placeholder span {
-        font-size: 0.92rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--gold);
-        font-family: var(--sans);
-      }
-      .prod-body {
-        padding: 20px 18px 24px;
-        flex: 1;
-      }
-      .prod-brand {
-        font-size: 0.96rem;
-        font-weight: 500;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--gold);
-        opacity: 0.6;
-        margin-bottom: 6px;
-      }
-      .prod-name {
-        font-family: var(--serif);
-        font-size: 1rem;
-        font-weight: 400;
-        color: var(--cream);
-        margin-bottom: 8px;
-        line-height: 1.3;
-      }
-      .prod-desc {
-        font-size: 0.92rem;
-        font-weight: 300;
-        line-height: 1.75;
-        color: rgba(245,239,228,0.62);
       }
 
       
