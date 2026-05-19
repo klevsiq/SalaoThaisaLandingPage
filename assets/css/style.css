@@ -1164,6 +1164,7 @@
       .cta-urgency {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         font-size: 0.90rem;
         font-weight: 400;
@@ -2212,6 +2213,17 @@
       /* Hamburger visível em todas as telas */
       .hamburger { display: flex; }
       .mobile-nav { display: flex; }
+
+      /* Nav links visíveis em desktop */
+      @media (min-width: 961px) {
+        .hamburger { display: none; }
+        .nl {
+          display: flex;
+          gap: 32px;
+          list-style: none;
+        }
+        .nc { display: block; }
+      }
 
 
       /* ── BRAND LOGOS ── */

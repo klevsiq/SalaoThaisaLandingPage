@@ -224,6 +224,13 @@
           document.body.style.overflow = '';
         });
       });
+      document.addEventListener('click', function(e) {
+        if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+          btn.classList.remove('open');
+          nav.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
     })();
     
     // ── MOBILE TOUCH: mostrar setas ao toque nos cards
