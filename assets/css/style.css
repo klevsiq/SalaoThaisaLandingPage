@@ -997,7 +997,7 @@
         font-size: 0.92rem;
         letter-spacing: 3px;
       }
-      .t-gb {
+      .t-gbadge {
         display: flex;
         align-items: center;
         gap: 5px;
@@ -1006,7 +1006,7 @@
         padding: 3px 8px;
         border-radius: 16px;
       }
-      .t-gb span {
+      .t-gbadge span {
         font-size: 0.92rem;
         color: rgba(245, 239, 228, 0.65);
         letter-spacing: 0.09em;
@@ -1017,7 +1017,7 @@
         gap: 10px;
         margin-top: auto;
       }
-      .t-av {
+      .t-avatar {
         width: 36px;
         height: 36px;
         border-radius: 50%;
@@ -1638,6 +1638,10 @@
       }
 
       /* ── KEYFRAMES ── */
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0.3; }
+      }
       @keyframes fUp {
         from {
           opacity: 0;

@@ -39,6 +39,7 @@
           }
         }
       }
+      updateStatus();
       setInterval(updateStatus, 60000);
 
       // Altura real do nav + svc-strip para o hero não ficar cortado
@@ -51,32 +52,6 @@
       setHeaderH();
       window.addEventListener("resize", setHeaderH);
 
-      // Hero slider
-      const slidesEl = document.querySelectorAll(".slide");
-      const dots = document.querySelectorAll(".dot");
-      const countEl = document.getElementById("hcount");
-      let cur = 0,
-        timer;
-      function goTo(n) {
-        slidesEl[cur].classList.remove("active");
-        dots[cur].classList.remove("on");
-        cur = (n + slidesEl.length) % slidesEl.length;
-        slidesEl[cur].classList.add("active");
-        dots[cur].classList.add("on");
-        countEl.textContent =
-          String(cur + 1).padStart(2, "0") + " / 0" + slidesEl.length;
-      }
-      function next() {
-        goTo(cur + 1);
-      }
-      timer = setInterval(next, 5000);
-      dots.forEach((d) =>
-        d.addEventListener("click", () => {
-          clearInterval(timer);
-          goTo(+d.dataset.i);
-          timer = setInterval(next, 5000);
-        }),
-      );
 
       // Reveal on scroll
       const obs = new IntersectionObserver(
