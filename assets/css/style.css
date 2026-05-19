@@ -1630,10 +1630,8 @@
           gap: 20px;
         }
         .profissional { padding: 64px 8%; }
-        .prof-photo { height: 200px; }
+        .prof-photo { height: 280px; }
         .prof-photo::before { display: none; }
-        .prof-body p:nth-child(2),
-        .prof-body p:nth-child(3) { display: none; }
         .brand-grid { grid-template-columns: 1fr; }
         .produtos-desc { text-align: left; }
       }
