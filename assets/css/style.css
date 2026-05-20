@@ -1315,7 +1315,7 @@
       .loc-map-badge {
         position: absolute;
         top: 16px;
-        left: 16px;
+        right: 16px;
         z-index: 2;
         display: flex;
         align-items: center;
