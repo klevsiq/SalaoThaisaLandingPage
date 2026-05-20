@@ -1583,8 +1583,6 @@
           flex-direction: column;
           text-align: center;
         }
-        .sf-brand,
-        .sf-google { display: none; }
         .hero-h1 {
           font-size: clamp(2rem, 4vw, 3.8rem);
           line-height: 1.05;
