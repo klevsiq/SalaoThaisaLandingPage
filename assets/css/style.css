@@ -1467,7 +1467,7 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        font-size: 0.92rem;
+        font-size: 0.78rem;
         color: rgba(245, 239, 228, 0.58);
         text-decoration: none;
         transition: color 0.2s;
@@ -1516,7 +1516,7 @@
         opacity: 0.6;
       }
       .sf-copy {
-        font-size: 0.96rem;
+        font-size: 0.78rem;
         color: rgba(245, 239, 228, 0.50);
         letter-spacing: 0.07em;
       }
