@@ -2198,8 +2198,15 @@ h2.sh em {
   .cta-h {
     font-size: 2.2rem;
   }
+  .testi {
+    padding: 60px 8% 32px;
+  }
   .testi-inner {
-    padding: 60px 5%;
+    padding: 60px 5% 0;
+  }
+  .testi-foot {
+    margin-top: 24px;
+    padding-top: 20px;
   }
   .testi-head {
     align-items: center;
