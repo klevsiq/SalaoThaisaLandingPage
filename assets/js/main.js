@@ -248,19 +248,3 @@
       }, { passive: true });
     }
 
-    // ── CUSTOM CURSOR ──
-    (function() {
-      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-      var cursor = document.getElementById('cursor');
-      if (!cursor) return;
-      document.addEventListener('mousemove', function(e) {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top  = e.clientY + 'px';
-        cursor.classList.remove('hidden');
-      });
-      document.addEventListener('mouseleave', function() { cursor.classList.add('hidden'); });
-      document.querySelectorAll('a, button').forEach(function(el) {
-        el.addEventListener('mouseenter', function() { cursor.classList.add('grow'); });
-        el.addEventListener('mouseleave', function() { cursor.classList.remove('grow'); });
-      });
-    })();
