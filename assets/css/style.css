@@ -1937,7 +1937,7 @@ h2.sh em {
 /* Mobile: foto acima, texto abaixo (mesmo padrão da seção Sobre) */
 @media (max-width: 960px) {
   .profissional {
-    padding: 64px 8%;
+    padding: 64px 8% 48px;
   }
   .prof-grid {
     grid-template-columns: 1fr;
@@ -1964,26 +1964,9 @@ h2.sh em {
     width: 100%;
     height: 100%;
   }
-  /* Stats em uma única linha no mobile */
+  /* Stats escondidos no mobile — economia de espaço */
   .prof-stats {
-    flex-wrap: nowrap;
-    gap: 14px;
-    justify-content: space-between;
-  }
-  .prof-stats > div {
-    flex: 1 1 0;
-    min-width: 0;
-    text-align: center;
-  }
-  .prof-stats .prof-stat-n {
-    font-size: 1.2rem !important;
-    line-height: 1;
-  }
-  .prof-stats .prof-stat-l {
-    font-size: 0.5rem !important;
-    letter-spacing: 0.04em;
-    margin-top: 6px;
-    line-height: 1.35;
+    display: none;
   }
 }
 
