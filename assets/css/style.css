@@ -1964,24 +1964,31 @@ h2.sh em {
     width: 100%;
     height: 100%;
   }
-  /* Stats em uma única linha no mobile */
+  /* Stats em cards pequenos lado a lado no mobile */
   .prof-stats {
     flex-wrap: nowrap;
-    gap: 12px;
+    gap: 8px;
     justify-content: space-between;
+    border-top: none;
+    padding-top: 24px;
   }
   .prof-stats > div {
     flex: 1 1 0;
     min-width: 0;
     text-align: center;
+    padding: 14px 6px;
+    background: rgba(198, 169, 106, 0.04);
+    border: 1px solid rgba(198, 169, 106, 0.12);
+    border-radius: 2px;
   }
   .prof-stat-n {
     font-size: 1.5rem;
   }
   .prof-stat-l {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    margin-top: 4px;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+    line-height: 1.3;
   }
 }
 
