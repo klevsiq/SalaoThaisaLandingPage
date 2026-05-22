@@ -2042,15 +2042,40 @@ h2.sh em {
   body {
     font-size: 1.05rem;
   }
+  /* Sobre, Profissional, Produtos, Instagram — corpo */
   p,
   .sp,
   .body-txt,
   .ai-text,
   .prof-body p,
-  .t-text,
-  .ig-sub {
-    font-size: 1rem !important;
-    line-height: 1.85;
+  .ig-sub,
+  .produtos-desc {
+    font-size: 1.08rem !important;
+    line-height: 1.75;
+  }
+  /* Sobre — títulos da lista */
+  .ai-title {
+    font-size: 1.08rem;
+  }
+  /* Serviços — microcopy abaixo dos cards (NÃO mexe nos cards) */
+  .svc-microcopy {
+    font-size: 0.95rem;
+  }
+  /* Instagram — handle */
+  .ig-handle {
+    font-size: 1rem;
+  }
+  /* Depoimentos — texto e autor (cuidado p/ não estourar card) */
+  .t-text {
+    font-size: 1.02rem !important;
+    line-height: 1.65;
+  }
+  .t-name {
+    font-size: 1rem;
+  }
+  .t-meta,
+  .t-svc {
+    font-size: 0.92rem;
   }
 
   /* Cards de serviço no mobile — texto sempre visível */
@@ -2129,13 +2154,6 @@ h2.sh em {
   .testi-inner {
     padding: 60px 5%;
   }
-  .t-text {
-    font-size: 0.96rem;
-    line-height: 1.7;
-  }
-  .t-name {
-    font-size: 0.92rem;
-  }
   .testi-head {
     align-items: center;
     text-align: center;
@@ -2145,9 +2163,6 @@ h2.sh em {
   }
   .svc-section {
     padding: 60px 5%;
-  }
-  .t-text {
-    font-size: 0.94rem;
   }
   .t-nav-btn {
     width: 38px;
