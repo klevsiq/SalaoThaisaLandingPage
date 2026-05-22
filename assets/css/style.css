@@ -2021,6 +2021,43 @@ h2.sh em {
   }
   .hero-abstract-mobile {
     display: block;
+    filter: drop-shadow(0 0 6px rgba(196, 163, 90, 0.35));
+  }
+  /* Fios fluidos mais grossos e com fade-in escalonado */
+  .hero-abstract-mobile path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-width: 1.6;
+    opacity: 0;
+    animation: strandFadeM 2.4s ease forwards;
+  }
+  .hero-abstract-mobile path:nth-of-type(1) { animation-delay: 0.1s; }
+  .hero-abstract-mobile path:nth-of-type(2) { animation-delay: 0.35s; }
+  .hero-abstract-mobile path:nth-of-type(3) { animation-delay: 0.6s; }
+  .hero-abstract-mobile path:nth-of-type(4) { animation-delay: 0.25s; }
+  .hero-abstract-mobile path:nth-of-type(5) { animation-delay: 0.85s; }
+  .hero-abstract-mobile path:nth-of-type(6) { animation-delay: 1.05s; }
+  /* Partículas pulsando com brilho */
+  .hero-abstract-mobile circle {
+    animation: particlePulseM 2.6s ease-in-out infinite;
+    transform-origin: center;
+  }
+  .hero-abstract-mobile circle:nth-of-type(2) { animation-delay: 0.4s; }
+  .hero-abstract-mobile circle:nth-of-type(3) { animation-delay: 0.8s; }
+  .hero-abstract-mobile circle:nth-of-type(4) { animation-delay: 1.2s; }
+  .hero-abstract-mobile circle:nth-of-type(5) { animation-delay: 1.6s; }
+  @keyframes strandFadeM {
+    to { opacity: 1; }
+  }
+  @keyframes particlePulseM {
+    0%, 100% {
+      opacity: 0.35;
+      r: 1.5;
+    }
+    50% {
+      opacity: 1;
+      r: 3.2;
+    }
   }
   /* Base font increase for mobile readability */
   body {
