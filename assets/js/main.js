@@ -1,48 +1,4 @@
-﻿      // Status aberto/fechado — Ter-Sex e Sab 09h-18h (horário de Brasília)
-      function updateStatus() {
-        const pill = document.getElementById("status-pill");
-        const dot = document.getElementById("status-dot");
-        const txt = document.getElementById("status-text");
-        if (!pill) return;
-        // Horário de Brasília (UTC-3)
-        const now = new Date(
-          new Date().toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }),
-        );
-        const day = now.getDay(); // 0=Dom,1=Seg,2=Ter,3=Qua,4=Qui,5=Sex,6=Sab
-        const h = now.getHours();
-        const m = now.getMinutes();
-        const mins = h * 60 + m;
-        const open = 9 * 60,
-          close = 18 * 60,
-          closeSat = 17 * 60;
-        // Aberto: Ter(2) a Sex(5) e Sab(6), das 9 às 18 (Sex)/17 (Sab)
-        const closeToday = day === 6 ? closeSat : close;
-        const isOpen =
-          day >= 2 && day <= 6 && mins >= open && mins < closeToday;
-        pill.style.display = "inline-flex";
-        if (isOpen) {
-          pill.classList.remove("fechado");
-          dot.style.animation = "blink 2s infinite";
-          txt.textContent = "Aberto agora";
-        } else {
-          pill.classList.add("fechado");
-          dot.style.animation = "none";
-          // Mostrar próximo horário
-          const days = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
-          if (day === 0 || day === 1) {
-            txt.textContent = "Abre terça às 09h";
-          } else if (mins >= closeToday) {
-            const next = day === 6 ? "terça" : days[(day + 1) % 7];
-            txt.textContent = "Abre " + next + " às 09h";
-          } else {
-            txt.textContent = "Abre hoje às 09h";
-          }
-        }
-      }
-      updateStatus();
-      setInterval(updateStatus, 60000);
-
-      // Altura real do nav + svc-strip para o hero não ficar cortado
+﻿      // Altura real do nav + svc-strip para o hero não ficar cortado
       function setHeaderH() {
         const n = document.getElementById("nav");
         const s = document.getElementById("svc-strip-top");
