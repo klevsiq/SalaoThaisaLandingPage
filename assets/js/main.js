@@ -248,3 +248,75 @@
       }, { passive: true });
     }
 
+    // ── LIGHTBOX para ampliar fotos dos cards de serviço ──
+    (function() {
+      var lb = document.getElementById('lightbox');
+      if (!lb) return;
+      var lbImg = document.getElementById('lbImg');
+      var lbDots = document.getElementById('lbDots');
+      var lbClose = document.getElementById('lbClose');
+      var lbPrev = document.getElementById('lbPrev');
+      var lbNext = document.getElementById('lbNext');
+      var imgs = [];
+      var idx = 0;
+
+      function render() {
+        if (!imgs.length) return;
+        lbImg.src = imgs[idx].src;
+        lbImg.alt = imgs[idx].alt || '';
+        lbDots.innerHTML = '';
+        if (imgs.length > 1) {
+          imgs.forEach(function(_, i) {
+            var d = document.createElement('span');
+            if (i === idx) d.classList.add('on');
+            lbDots.appendChild(d);
+          });
+          lbPrev.style.display = '';
+          lbNext.style.display = '';
+        } else {
+          lbPrev.style.display = 'none';
+          lbNext.style.display = 'none';
+        }
+      }
+      function open(card) {
+        var cardImgs = Array.from(card.querySelectorAll('.svc-img img'));
+        if (!cardImgs.length) return;
+        imgs = cardImgs;
+        var active = imgs.findIndex(function(i) { return i.classList.contains('on'); });
+        idx = active >= 0 ? active : 0;
+        render();
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      function go(n) {
+        if (!imgs.length) return;
+        idx = (n + imgs.length) % imgs.length;
+        render();
+      }
+
+      document.querySelectorAll('.svc-card').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+          if (e.target.closest('.svc-nav') || e.target.closest('.svc-dots')) return;
+          open(card);
+        });
+      });
+      lbClose.addEventListener('click', close);
+      lbPrev.addEventListener('click', function() { go(idx - 1); });
+      lbNext.addEventListener('click', function() { go(idx + 1); });
+      lb.addEventListener('click', function(e) {
+        if (e.target === lb) close();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') go(idx - 1);
+        else if (e.key === 'ArrowRight') go(idx + 1);
+      });
+    })();
+
