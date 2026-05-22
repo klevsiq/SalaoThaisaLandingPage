@@ -2124,13 +2124,39 @@ h2.sh em {
     padding: 16px 14px;
   }
 
-  /* Setas de foto: só aparece ao tocar (touch), esconde por padrão */
+  /* Setas de foto minimalistas no mobile — só aparecem ao tocar */
   .svc-nav {
     opacity: 0 !important;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    color: rgba(245, 239, 228, 0.85);
+  }
+  .svc-nav svg {
+    width: 18px;
+    height: 18px;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+  }
+  .svc-nav.prev {
+    left: 6px;
+  }
+  .svc-nav.next {
+    right: 6px;
   }
   .svc-card:active .svc-nav,
   .svc-card.touched .svc-nav {
-    opacity: 1 !important;
+    opacity: 0.7 !important;
+  }
+  /* Dots menores também */
+  .svc-dots {
+    top: 8px;
+    gap: 4px;
+  }
+  .svc-dots span {
+    width: 4px;
+    height: 4px;
   }
 
   /* Overlay mais escuro no mobile para garantir legibilidade */
