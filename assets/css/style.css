@@ -529,7 +529,7 @@ nav {
   margin-bottom: 14px;
 }
 .eyebrow span {
-  font-size: 0.92rem;
+  font-size: 1rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
@@ -538,7 +538,7 @@ nav {
 /* Eyebrow especial da seção Sobre */
 .about-eyebrow span {
   font-family: var(--serif);
-  font-size: 0.94rem;
+  font-size: 1.05rem;
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.12em;
@@ -553,7 +553,7 @@ nav {
 }
 h2.sh {
   font-family: var(--serif);
-  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
   font-weight: 700;
   line-height: 1.1;
   color: var(--cream);
@@ -572,6 +572,12 @@ h2.sh em {
 }
 
 /* ── ABOUT ── */
+.about-header {
+  max-width: 1200px;
+  margin: 0 auto 52px;
+  position: relative;
+  z-index: 1;
+}
 .about {
   padding: 100px 8%;
   background: var(--ink2);
@@ -1785,6 +1791,9 @@ h2.sh em {
     padding: 0 7% 60px;
     padding-top: calc(var(--header-h, 110px) + 20px);
   }
+  .about-header {
+    margin-bottom: 36px;
+  }
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -1880,6 +1889,10 @@ h2.sh em {
 }
 
 /* ── PROFISSIONAL ── */
+.prof-header {
+  max-width: 1200px;
+  margin: 0 auto 52px;
+}
 .profissional {
   padding: 100px 8%;
   background: var(--ink2);
@@ -2024,6 +2037,9 @@ h2.sh em {
 
 /* Mobile: foto acima, texto abaixo (mesmo padrão da seção Sobre) */
 @media (max-width: 960px) {
+  .prof-header {
+    margin-bottom: 36px;
+  }
   .profissional {
     padding: 64px 8% 48px;
   }
@@ -2308,6 +2324,16 @@ h2.sh em {
   }
   .mq-item {
     padding: 0 20px;
+  }
+
+  /* Contato — tipografia sans leve, tamanho legível no mobile */
+  .loc-col-val {
+    font-size: 1rem;
+    line-height: 1.85;
+    letter-spacing: 0.03em;
+  }
+  .loc-col-val small {
+    font-size: 0.9rem;
   }
 }
 
@@ -2602,6 +2628,9 @@ section:not(.hero) {
   .hero-h1 {
     font-size: 1.7rem;
     line-height: 1.08;
+  }
+  h2.sh {
+    font-size: 2rem;
   }
   .svc-grid {
     grid-auto-rows: 280px;
