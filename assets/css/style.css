@@ -2068,6 +2068,9 @@ h2.sh em {
     width: 100%;
     height: 100%;
   }
+  .prof-photo-main img {
+    object-position: center 30%;
+  }
   /* Stats escondidos no mobile — economia de espaço */
   .prof-stats {
     display: none;
