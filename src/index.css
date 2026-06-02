@@ -495,6 +495,7 @@ h2.sh em { font-style: italic; color: var(--gold); }
   right: 0;
   padding: 22px 20px;
   z-index: 2;
+  text-align: center;
 }
 .svc-name {
   font-family: var(--serif);
