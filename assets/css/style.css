@@ -1498,7 +1498,7 @@ h2.sh em {
     max-width: 100%;
   }
   .svc-microcopy svg {
-    margin-top: 4px;
+    display: none;
   }
   .svc-microcopy .smc-br {
     display: block;
