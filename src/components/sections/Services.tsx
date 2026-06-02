@@ -165,10 +165,10 @@ interface CardProps {
 }
 
 function ServiceCard({ svc, onOpen }: CardProps) {
-  const { ref: cardRef, inView } = useInView<HTMLButtonElement>()
+  const { ref: cardRef, inView } = useInView<HTMLDivElement>()
   const [imgIdx, setImgIdx] = useState(0)
   const isDual = svc.images.length > 1
-  const touchedRef = useRef(false)
+  const touchStart = useRef({ x: 0, y: 0 })
 
   const handlePrev = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -179,24 +179,39 @@ function ServiceCard({ svc, onOpen }: CardProps) {
     setImgIdx(i => (i + 1) % svc.images.length)
   }
 
-  const handleCardClick = () => {
-    if (!touchedRef.current) onOpen(svc.images, imgIdx)
-  }
-
   const handleTouchStart = (e: React.TouchEvent) => {
     const target = e.target as HTMLElement
     if (target.closest('.svc-nav')) return
-    touchedRef.current = false
+    touchStart.current = { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const target = e.target as HTMLElement
+    if (target.closest('.svc-nav')) return
+    const dx = e.changedTouches[0].clientX - touchStart.current.x
+    const dy = e.changedTouches[0].clientY - touchStart.current.y
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+      if (isDual) {
+        if (dx < 0) setImgIdx(i => (i + 1) % svc.images.length)
+        else setImgIdx(i => (i - 1 + svc.images.length) % svc.images.length)
+      }
+    } else if (Math.abs(dx) < 12 && Math.abs(dy) < 12) {
+      onOpen(svc.images, imgIdx)
+    }
+    e.preventDefault()
   }
 
   return (
-    <button
+    <div
       ref={cardRef}
       className={`svc-card reveal${svc.delay ? ' ' + svc.delay : ''}${inView ? ' on' : ''}`}
       id={svc.id}
-      type="button"
-      onClick={handleCardClick}
+      role="button"
+      tabIndex={0}
+      onClick={() => onOpen(svc.images, imgIdx)}
       onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onOpen(svc.images, imgIdx) }}
       aria-label={`Ver fotos de ${svc.name}`}
     >
       <div className={`svc-img${isDual ? ' dual' : ''}`}>
@@ -251,7 +266,7 @@ function ServiceCard({ svc, onOpen }: CardProps) {
         <p className="svc-desc">{svc.description}</p>
         <span className="svc-cta">Ampliar →</span>
       </div>
-    </button>
+    </div>
   )
 }
 
