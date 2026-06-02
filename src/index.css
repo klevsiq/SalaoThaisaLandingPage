@@ -453,11 +453,11 @@ h2.sh em { font-style: italic; color: var(--gold); }
 .svc-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 540px;
   gap: 14px;
 }
 .svc-card {
   position: relative;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 3px;
   background: var(--ink3);
@@ -475,7 +475,7 @@ h2.sh em { font-style: italic; color: var(--gold); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center center;
   filter: brightness(0.72) saturate(0.92);
   transition: transform 0.7s var(--ease), filter 0.5s;
 }
@@ -1290,7 +1290,7 @@ section:not(.hero) { box-shadow: inset 0 70px 50px -50px rgba(6,5,4,0.65); }
 
 
 @media (max-width: 1100px) {
-  .svc-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 460px; }
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 960px) {
@@ -1303,7 +1303,7 @@ section:not(.hero) { box-shadow: inset 0 70px 50px -50px rgba(6,5,4,0.65); }
   .about-imgs { height: 280px; }
   .about-text-panel { padding-left: 0; }
   .about-text-panel::before { display: none; }
-  .svc-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 420px; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
   .t-card { flex: 0 0 calc(50% - 10px); }
   .testi-head { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
   .testi-score { text-align: center; }
@@ -1396,8 +1396,7 @@ section:not(.hero) { box-shadow: inset 0 70px 50px -50px rgba(6,5,4,0.65); }
   .svc-overlay { background: linear-gradient(to top, rgba(13,11,9,0.97) 0%, rgba(13,11,9,0.55) 45%, rgba(13,11,9,0.1) 100%) !important; }
   .hero-h1 { font-size: 1.9rem; line-height: 1.08; }
   .hero-content { padding: 0 6% 50px; padding-top: calc(var(--header-h, 110px) + 16px); }
-  .svc-grid { grid-template-columns: 1fr; grid-auto-rows: 360px; }
-  .svc-img img { object-position: center bottom; }
+  .svc-grid { grid-template-columns: 1fr; }
   .t-card { flex: 0 0 calc(100vw - 10%); max-width: 100%; padding: 24px 20px; }
   .t-carousel-wrap { overflow: hidden; }
   .cta-h { font-size: 2.2rem; }
@@ -1437,5 +1436,4 @@ section:not(.hero) { box-shadow: inset 0 70px 50px -50px rgba(6,5,4,0.65); }
 @media (max-width: 400px) {
   .hero-h1 { font-size: 1.7rem; line-height: 1.08; }
   h2.sh { font-size: 2rem; }
-  .svc-grid { grid-auto-rows: 280px; }
 }
