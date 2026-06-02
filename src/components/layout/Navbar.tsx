@@ -34,15 +34,6 @@ export default function Navbar({ onHeightChange }: NavbarProps) {
 
   const closeMenu = () => setMenuOpen(false)
 
-  const navLinks = [
-    { href: '#sobre', label: 'Sobre' },
-    { href: '#servicos', label: 'Serviços' },
-    { href: '#profissional', label: 'Profissional' },
-    { href: '#produtos', label: 'Produtos' },
-    { href: '#depoimentos', label: 'Avaliações' },
-    { href: '#contato', label: 'Contato' },
-  ]
-
   return (
     <>
       <nav id="nav" ref={navRef}>
@@ -50,14 +41,6 @@ export default function Navbar({ onHeightChange }: NavbarProps) {
           <div className="nb-name">Tha Carolina Hair Studio</div>
           <div className="nb-sub">Atendimento Personalizado</div>
         </a>
-
-        <ul className="nl">
-          {navLinks.map(({ href, label }) => (
-            <li key={href}>
-              <a href={href}>{label}</a>
-            </li>
-          ))}
-        </ul>
 
         <button
           className={`hamburger${menuOpen ? ' open' : ''}`}
