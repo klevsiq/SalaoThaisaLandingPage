@@ -235,6 +235,9 @@ function ServiceCard({ svc, onOpen }: CardProps) {
       )}
 
       <div className="svc-overlay" />
+      <div className="svc-body">
+        <h3 className="svc-name">{svc.name}</h3>
+      </div>
 
       {isDual && (
         <>
