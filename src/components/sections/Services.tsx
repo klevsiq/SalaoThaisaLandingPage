@@ -261,11 +261,6 @@ function ServiceCard({ svc, onOpen }: CardProps) {
         </>
       )}
 
-      <div className="svc-body">
-        <h3 className="svc-name">{svc.name}</h3>
-        <p className="svc-desc">{svc.description}</p>
-        <span className="svc-cta">Ampliar →</span>
-      </div>
     </div>
   )
 }
