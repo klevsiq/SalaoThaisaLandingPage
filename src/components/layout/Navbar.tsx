@@ -54,14 +54,6 @@ export default function Navbar({ onHeightChange }: NavbarProps) {
           <span />
         </button>
 
-        <a
-          href="https://wa.me/5511947195729"
-          className="nc"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Agendar
-        </a>
       </nav>
 
       <div
