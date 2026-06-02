@@ -566,16 +566,16 @@ h2.sh em { font-style: italic; color: var(--gold); }
 .svc-nav svg { width: 14px; height: 14px; display: block; }
 .svc-dots {
   position: absolute;
-  top: 12px;
+  bottom: 48px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 5px;
+  gap: 6px;
   z-index: 3;
 }
 .svc-dots span {
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: rgba(245,239,228,0.65);
   transition: background 0.3s, transform 0.3s;
