@@ -27,11 +27,12 @@ export default function CTABand() {
         </p>
         <a href={WA_URL} className="cta-btn" target="_blank" rel="noopener noreferrer">
           <WhatsAppIcon />
-          Falar no WhatsApp
+          Agendar meu horário agora
         </a>
         <p className="cta-urgency">
-          <span className="cu-line">Agenda com vagas limitadas por semana</span>
-          <span className="cu-line">Atendimento exclusivo com hora marcada</span>
+          <span className="cu-line">Vagas limitadas por semana</span>
+          <span className="cu-line">Confirmação em até 1h pelo WhatsApp</span>
+          <span className="cu-line">Orçamento gratuito, sem compromisso</span>
         </p>
       </div>
     </section>

@@ -32,13 +32,13 @@ export default function App() {
       <ServiceStrip onHeightChange={handleStripHeight} />
       <main>
         <Hero />
-        <About />
         <Services />
         <Professional />
-        <Products />
-        <Instagram />
         <Testimonials />
         <CTABand />
+        <About />
+        <Products />
+        <Instagram />
         <Location />
       </main>
       <Footer />
