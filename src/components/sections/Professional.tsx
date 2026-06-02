@@ -54,20 +54,7 @@ export default function Professional() {
               que você vai querer mostrar para o mundo.
             </p>
           </div>
-          <div className="prof-stats">
-            <div>
-              <p className="prof-stat-n">12+</p>
-              <p className="prof-stat-l">Anos de<br />experiência</p>
-            </div>
-            <div>
-              <p className="prof-stat-n">+500</p>
-              <p className="prof-stat-l">Clientes<br />atendidas</p>
-            </div>
-            <div>
-              <p className="prof-stat-n">5★</p>
-              <p className="prof-stat-l">Google<br />Reviews</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
