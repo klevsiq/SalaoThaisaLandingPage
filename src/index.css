@@ -1416,6 +1416,8 @@ section:not(.hero) { box-shadow: inset 0 70px 50px -50px rgba(6,5,4,0.65); }
   /* Hero actions: empilha no mobile pequeno */
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 28px; }
   .hero-sec-link { font-size: 0.8rem; }
+  /* Texto da profissional centralizado no mobile (foto fica acima) */
+  .prof-content { text-align: center; }
   /* Botão dourado menor no celular */
   .btn-gold { padding: 11px 22px; font-size: 0.78rem; letter-spacing: 0.12em; gap: 7px; }
   /* Botão CTA WhatsApp menor no celular */
@@ -1523,7 +1525,7 @@ section:not(.hero) { box-shadow: inset 0 70px 50px -50px rgba(6,5,4,0.65); }
   .lb-prev { left: 8px; width: 38px; height: 38px; }
   .lb-next { right: 8px; width: 38px; height: 38px; }
   .lb-dots { bottom: 14px; }
-  .cta-urgency { flex-direction: column; gap: 8px; font-size: 0.7rem; letter-spacing: 0.1em; padding: 0 16px; margin-top: 22px; }
+  .cta-urgency { flex-direction: column; gap: 8px; font-size: 0.62rem; letter-spacing: 0.1em; padding: 0 16px; margin-top: 22px; }
   .cta-urgency .cu-line { white-space: normal; max-width: 100%; }
 }
 
