@@ -18,7 +18,7 @@ npm run dev       # servidor local em http://localhost:5173
 
 **Manual (emergência):** `npm run build && npm run deploy`
 
-URL: https://klevsiq.github.io/SalaoThaisaLandingPage
+URL: https://thacarolina.com.br
 
 ## Arquitetura
 
