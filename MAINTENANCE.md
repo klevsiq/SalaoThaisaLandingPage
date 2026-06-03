@@ -4,9 +4,9 @@
 
 **Fluxo:** edite os arquivos → `git add` → `git commit` → `git push origin v2`
 
-O GitHub Actions detecta o push no branch `v2`, faz o build (`npm run build`) e publica no GitHub Pages automaticamente em ~2-3 minutos. Nenhum comando extra é necessário.
+O GitHub Actions detecta o push no branch `v2`, faz o build (`npm run build`) e publica no GitHub Pages automaticamente em ~2-3 minutos.
 
-**URL do site:** https://klevsiq.github.io/SalaoThaisaLandingPage
+**URL do site:** https://thacarolina.com.br
 
 ---
 
@@ -32,9 +32,12 @@ src/
   index.css               — todos os estilos (design system)
 public/
   assets/images/
-    gallery/              — fotos dos serviços
-    logos/                — logos de marcas (Mirra, Wella, Truss)
+    gallery/              — fotos dos serviços (.webp)
+    logos/                — logos de marcas (.png)
   favicon.svg             — ícone do browser
+  sitemap.xml             — sitemap para o Google
+  CNAME                   — domínio customizado
+index.html                — Analytics GA4, Meta Pixel e Schema.org ficam aqui
 ```
 
 ---
@@ -43,13 +46,14 @@ public/
 
 ### Adicionar foto a um card de serviço
 
-1. Coloque a imagem em `public/assets/images/gallery/` (JPG ou JPEG)
-2. Abra `src/components/sections/Services.tsx`
-3. Localize o serviço pelo `id` (ex: `svc-progressiva`)
-4. Adicione um objeto no array `images`:
+1. Converta a imagem para `.webp` (ferramenta online: squoosh.app)
+2. Coloque o arquivo em `public/assets/images/gallery/`
+3. Abra `src/components/sections/Services.tsx`
+4. Localize o serviço pelo `id` (ex: `svc-progressiva`)
+5. Adicione um objeto no array `images`:
 
 ```tsx
-{ src: img('gallery/nome-da-foto.jpg'), alt: 'Descrição da foto' }
+{ src: img('gallery/nome-da-foto.webp'), alt: 'Descrição da foto' }
 ```
 
 Cards com mais de 1 imagem ganham slider automático (setas + dots).
@@ -107,17 +111,26 @@ Edite ou substitua `public/favicon.svg`. O arquivo é um SVG com a letra "T" em 
 
 ---
 
-## Deploy manual (se necessário)
+## Integrações ativas
 
-Se o GitHub Actions falhar, é possível fazer o deploy manualmente:
+| Integração | Onde gerenciar |
+|---|---|
+| Google Analytics GA4 (`G-7TCXQC8QRW`) | analytics.google.com |
+| Meta Pixel (`1771468644208602`) | business.facebook.com → Gerenciador de Eventos |
+| Google Search Console | search.google.com/search-console |
+| Schema.org HairSalon | Validar em search.google.com/test/rich-results |
+
+Para atualizar IDs ou remover uma integração, edite o bloco correspondente em `index.html`.
+
+---
+
+## Deploy manual (se GitHub Actions falhar)
 
 ```bash
 cd E:\ClaudeCode\SalaoThaisaLandingPage
 npm run build
 npm run deploy
 ```
-
-O comando `npm run deploy` usa o pacote `gh-pages` para enviar o conteúdo da pasta `dist/` ao branch `gh-pages`. **Atenção:** o deploy automático via Actions é preferível pois garante consistência com o código no `v2`.
 
 ---
 

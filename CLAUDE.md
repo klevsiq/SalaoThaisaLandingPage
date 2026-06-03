@@ -20,10 +20,26 @@ npm run dev       # servidor local em http://localhost:5173
 
 URL: https://thacarolina.com.br
 
+## Integrações ativas
+
+| Integração | ID / detalhe |
+|---|---|
+| Google Analytics GA4 | `G-7TCXQC8QRW` — em `index.html` |
+| Meta Pixel | `1771468644208602` — em `index.html` |
+| Schema.org | `HairSalon` — em `index.html` (validado no Rich Results Test) |
+| Google Search Console | Verificado via DNS TXT no Cloudflare |
+| Sitemap | `https://thacarolina.com.br/sitemap.xml` — enviado ao Search Console |
+
 ## Arquitetura
 
 ```
-index.html                    — entrada do Vite (referencia favicon e fontes)
+index.html                    — entrada do Vite (Analytics, Pixel, Schema.org, favicon, fontes)
+public/
+  assets/images/gallery/      — fotos dos serviços (.webp)
+  assets/images/logos/        — logos de marcas (Mirra, Wella, Truss) (.png)
+  favicon.svg                 — ícone "T" dourado
+  sitemap.xml                 — sitemap para indexação do Google
+  CNAME                       — domínio customizado thacarolina.com.br
 src/
   App.tsx                     — raiz: monta seções, gerencia --nav-h / --strip-h / --header-h
   index.css                   — design system global (Tailwind base + CSS vars + estilos)
@@ -35,10 +51,6 @@ src/
     sections/ Hero · Services · Professional · Testimonials · CTABand
               About · Products · Instagram · Location
     WhatsAppFloat.tsx
-public/
-  assets/images/gallery/      — fotos dos serviços (.jpg / .jpeg)
-  assets/images/logos/        — logos de marcas (Mirra, Wella, Truss)
-  favicon.svg                 — ícone "T" dourado
 ```
 
 ### Seções (ordem em App.tsx)
@@ -70,10 +82,11 @@ public/
 
 ### Adicionando imagens a cards de serviço
 
-1. Copie a imagem para `public/assets/images/gallery/`
-2. Em `Services.tsx`, localize o serviço e adicione ao array `images`:
+1. Converta a imagem para `.webp` (use o script `convert-webp.mjs` ou ferramenta online)
+2. Copie para `public/assets/images/gallery/`
+3. Em `Services.tsx`, localize o serviço e adicione ao array `images`:
    ```tsx
-   { src: img('gallery/nome.jpg'), alt: 'Descrição' }
+   { src: img('gallery/nome.webp'), alt: 'Descrição' }
    ```
 
 ## Informações de contato (hard-coded)
