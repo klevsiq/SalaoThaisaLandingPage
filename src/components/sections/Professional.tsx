@@ -23,7 +23,7 @@ export default function Professional() {
         >
           <div className="prof-photo-main">
             <img
-              src={img('gallery/foto_pofission_salao_2.jpeg')}
+              src={img('gallery/foto_pofission_salao_2.webp')}
               alt="Thaisa Carolina — cabeleireira especialista no Tha Carolina Hair Studio"
               width={940}
               height={1252}

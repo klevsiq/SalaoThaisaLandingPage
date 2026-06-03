@@ -23,7 +23,7 @@ export default function About() {
         >
           <div className="a-main">
             <img
-              src={img('gallery/image_21.jpeg')}
+              src={img('gallery/image_21.webp')}
               alt="Interior do Tha Carolina Hair Studio — vista ampla do salão"
               width={1600}
               height={1170}
@@ -32,7 +32,7 @@ export default function About() {
           </div>
           <div className="a-accent">
             <img
-              src={img('gallery/image_23.jpeg')}
+              src={img('gallery/image_23.webp')}
               alt="Ambiente do studio — área de atendimento com parede verde e cadeiras"
               width={1600}
               height={1200}

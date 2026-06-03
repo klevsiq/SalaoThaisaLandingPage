@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const URL = 'http://localhost:5174/SalaoThaisaLandingPage/';
+const browser = await chromium.launch();
+const page = await browser.newPage();
+await page.setViewportSize({ width: 375, height: 812 });
+await page.goto(URL, { waitUntil: 'networkidle' });
+await page.waitForTimeout(1800);
+await page.screenshot({ path: 'shot_mobile_hero.png' });
+await page.evaluate(() => document.getElementById('agendar').scrollIntoView());
+await page.waitForTimeout(800);
+await page.screenshot({ path: 'shot_mobile_cta.png' });
+await browser.close();
+console.log('done');
