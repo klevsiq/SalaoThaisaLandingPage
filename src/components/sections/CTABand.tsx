@@ -31,7 +31,6 @@ export default function CTABand() {
         </a>
         <p className="cta-urgency">
           <span className="cu-line">Vagas limitadas por semana</span>
-          <span className="cu-line">Confirmação em até 1h pelo WhatsApp</span>
           <span className="cu-line">Orçamento gratuito, sem compromisso</span>
         </p>
       </div>
