@@ -3,6 +3,9 @@ dist/
 .claude/
 *.tsbuildinfo
 .DS_Store
+assets/
+chk_*.png
+prof_*.png
+favicon_preview.png
 screenshot*.png
-shot_*.png
-screenshot.mjs
+screenshot*.mjs
