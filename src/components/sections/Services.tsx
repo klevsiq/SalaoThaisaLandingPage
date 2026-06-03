@@ -41,6 +41,8 @@ const services: ServiceData[] = [
     description: 'Liso duradouro, sem frizz e sem agredir os fios. Progressiva que respeita seu cabelo e entrega resultado que dura meses.',
     images: [
       { src: img('gallery/image_14.jpg'), alt: 'Progressiva - cabelo liso e brilhante' },
+      { src: img('gallery/progressiva_2.jpeg'), alt: 'Progressiva - resultado liso' },
+      { src: img('gallery/progressiva_3.jpeg'), alt: 'Progressiva - fios lisos e brilhantes' },
     ],
     delay: 'd3',
   },
@@ -51,6 +53,7 @@ const services: ServiceData[] = [
     images: [
       { src: img('gallery/image_15.jpg'), alt: 'Botox capilar - corte chanel preto brilhante' },
       { src: img('gallery/image_16.jpg'), alt: 'Botox capilar - cabelo castanho liso e brilhante' },
+      { src: img('gallery/Botox_2.jpeg'), alt: 'Botox capilar - resultado' },
     ],
     delay: 'd1',
   },
@@ -71,6 +74,7 @@ const services: ServiceData[] = [
     images: [
       { src: img('gallery/image_19.jpg'), alt: 'Escova & Tratamentos' },
       { src: img('gallery/image_20.jpg'), alt: 'Escova - cabelo morena iluminada' },
+      { src: img('gallery/Escova_Tratamentos_2.jpeg'), alt: 'Escova & Tratamentos - resultado' },
     ],
     delay: 'd3',
   },
