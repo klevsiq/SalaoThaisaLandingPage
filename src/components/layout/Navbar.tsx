@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 
+declare const gtag: (...args: unknown[]) => void
+const trackWA = () => {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: 'navbar' })
+  }
+}
+
 interface NavbarProps {
   onHeightChange: (h: number) => void
 }
@@ -75,7 +82,7 @@ export default function Navbar({ onHeightChange }: NavbarProps) {
           className="mn-cta"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={closeMenu}
+          onClick={() => { closeMenu(); trackWA() }}
         >
           Agendar
         </a>

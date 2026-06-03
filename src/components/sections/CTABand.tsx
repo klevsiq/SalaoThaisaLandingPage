@@ -1,6 +1,14 @@
 import { useInView } from '@/hooks/useInView'
 
+declare const gtag: (...args: unknown[]) => void
+
 const WA_URL = 'https://wa.me/5511947195729?text=Ol%C3%A1!%20Vim%20do%20site%20e%20quero%20agendar!'
+
+const trackWA = (label: string) => {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: label })
+  }
+}
 
 const WhatsAppIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -25,7 +33,7 @@ export default function CTABand() {
           Agende pelo WhatsApp e garanta o seu horário. A confirmação é rápida
           e você já recebe as orientações para o seu atendimento.
         </p>
-        <a href={WA_URL} className="cta-btn" target="_blank" rel="noopener noreferrer">
+        <a href={WA_URL} className="cta-btn" target="_blank" rel="noopener noreferrer" onClick={() => trackWA('cta-band')}>
           <WhatsAppIcon />
           Agendar meu horário agora
         </a>
