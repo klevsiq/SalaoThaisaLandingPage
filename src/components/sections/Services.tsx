@@ -48,12 +48,12 @@ const services: ServiceData[] = [
   },
   {
     id: 'svc-botox',
-    name: 'Botox Capilar',
+    name: 'Selagem Capilar',
     description: 'Cabelo danificado tem solução. Recuperação intensa, hidratação profunda e resultado visível desde a primeira sessão.',
     images: [
-      { src: img('gallery/image_15.webp'), alt: 'Botox capilar - corte chanel preto brilhante' },
-      { src: img('gallery/image_16.webp'), alt: 'Botox capilar - cabelo castanho liso e brilhante' },
-      { src: img('gallery/Botox_2.webp'), alt: 'Botox capilar - resultado' },
+      { src: img('gallery/image_15.webp'), alt: 'Selagem capilar - corte chanel preto brilhante' },
+      { src: img('gallery/image_16.webp'), alt: 'Selagem capilar - cabelo castanho liso e brilhante' },
+      { src: img('gallery/Botox_2.webp'), alt: 'Selagem capilar - resultado' },
     ],
     delay: 'd1',
   },
