@@ -94,7 +94,7 @@ export default function Testimonials() {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
-    loop: false,
+    loop: true,
     dragFree: false,
   })
 
@@ -121,6 +121,21 @@ export default function Testimonials() {
       emblaApi.off('reInit', onSelect)
     }
   }, [emblaApi, onSelect])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    if (!window.matchMedia('(max-width: 768px)').matches) return
+
+    let timer: ReturnType<typeof setInterval>
+    const play = () => { timer = setInterval(() => emblaApi.scrollNext(), 3000) }
+    const stop = () => clearInterval(timer)
+
+    play()
+    emblaApi.on('pointerDown', stop)
+    emblaApi.on('pointerUp', () => { stop(); play() })
+
+    return () => { stop() }
+  }, [emblaApi])
 
   const scrollPrev = () => emblaApi?.scrollPrev()
   const scrollNext = () => emblaApi?.scrollNext()
