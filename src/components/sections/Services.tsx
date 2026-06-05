@@ -53,7 +53,6 @@ const services: ServiceData[] = [
     images: [
       { src: img('gallery/image_15.webp'), alt: 'Selagem capilar - corte chanel preto brilhante' },
       { src: img('gallery/image_16.webp'), alt: 'Selagem capilar - cabelo castanho liso e brilhante' },
-      { src: img('gallery/Botox_2.webp'), alt: 'Selagem capilar - resultado' },
     ],
     delay: 'd1',
   },
