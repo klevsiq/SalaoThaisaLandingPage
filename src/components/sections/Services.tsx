@@ -47,7 +47,7 @@ const services: ServiceData[] = [
     delay: 'd3',
   },
   {
-    id: 'svc-botox',
+    id: 'svc-selagem',
     name: 'Selagem Capilar',
     description: 'Cabelo danificado tem solução. Recuperação intensa, hidratação profunda e resultado visível desde a primeira sessão.',
     images: [
