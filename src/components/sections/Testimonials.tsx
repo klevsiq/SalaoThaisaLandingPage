@@ -127,7 +127,7 @@ export default function Testimonials() {
     if (!window.matchMedia('(max-width: 768px)').matches) return
 
     let timer: ReturnType<typeof setInterval>
-    const play = () => { timer = setInterval(() => emblaApi.scrollNext(), 3000) }
+    const play = () => { timer = setInterval(() => emblaApi.scrollNext(), 5000) }
     const stop = () => clearInterval(timer)
 
     play()
