@@ -13,7 +13,7 @@ export default function Products() {
         className={`produtos-head reveal${headIn ? ' on' : ''}`}
         ref={headRef}
       >
-        <div>
+        <div className="produtos-title">
           <div className="eyebrow"><span>Produtos</span></div>
           <h2 className="sh">Marcas que<br /><em>fazem a diferença</em></h2>
         </div>
