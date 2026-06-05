@@ -1235,51 +1235,52 @@ h2.sh em { font-style: italic; color: var(--gold); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── MOBILE NAV DROPDOWN ── */
+/* ── MOBILE NAV OVERLAY ── */
 .mobile-nav {
   display: flex;
   position: fixed;
-  top: var(--nav-h, 56px);
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   background: rgba(11,9,6,0.97);
   z-index: 799;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  justify-content: flex-start;
+  gap: 14px;
   backdrop-filter: blur(20px);
-  padding: 10px 24px 14px;
+  padding-top: calc(var(--nav-h, 56px) + 28px);
+  padding-bottom: 32px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s var(--ease);
-  border-bottom: 1px solid rgba(196,163,90,0.15);
+  transition: opacity 0.28s var(--ease);
 }
 .mobile-nav.open { opacity: 1; pointer-events: all; }
 .mobile-nav a {
   font-family: var(--serif);
-  font-size: 0.88rem;
+  font-size: 1.15rem;
   font-weight: 300;
   font-style: italic;
   color: rgba(245,239,228,0.65);
   text-decoration: none;
   letter-spacing: 0.04em;
-  padding: 3px 0;
   transition: color 0.2s;
 }
 .mobile-nav a:hover { color: var(--gold); }
 .mobile-nav .mn-cta {
-  margin-top: 4px;
+  margin-top: 10px;
   font-family: var(--sans);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ink) !important;
   background: var(--gold);
-  padding: 8px 22px;
+  padding: 11px 30px;
 }
-.mobile-nav .mn-sep { width: 28px; height: 1px; background: rgba(198,169,106,0.2); margin: 1px 0; }
+.mobile-nav .mn-sep { width: 36px; height: 1px; background: rgba(198,169,106,0.2); margin: 2px 0; }
 
 /* ── LIGHTBOX ── */
 .lightbox-overlay {

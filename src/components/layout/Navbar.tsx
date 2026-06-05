@@ -32,8 +32,10 @@ export default function Navbar({ onHeightChange }: NavbarProps) {
       if (e.key === 'Escape') setMenuOpen(false)
     }
     document.addEventListener('keydown', handleKey)
+    document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', handleKey)
+      document.body.style.overflow = ''
     }
   }, [menuOpen])
 
