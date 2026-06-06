@@ -51,7 +51,7 @@ export default function About() {
             verdadeiramente especial.
           </p>
           <p className="sp" style={{ marginTop: '14px' }}>
-            Oferecemos um tratamento totalmente personalizado, porque sabemos que cada cliente é única.
+            Oferecemos um atendimento totalmente personalizado, porque sabemos que cada cliente é única.
           </p>
           <ul className="about-list">
             <li className="about-item">

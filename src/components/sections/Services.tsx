@@ -48,11 +48,11 @@ const services: ServiceData[] = [
   },
   {
     id: 'svc-selagem',
-    name: 'Selagem Capilar',
+    name: 'Nutrição & Brilho',
     description: 'Cabelo danificado tem solução. Recuperação intensa, hidratação profunda e resultado visível desde a primeira sessão.',
     images: [
-      { src: img('gallery/image_15.webp'), alt: 'Selagem capilar - corte chanel preto brilhante' },
-      { src: img('gallery/image_16.webp'), alt: 'Selagem capilar - cabelo castanho liso e brilhante' },
+      { src: img('gallery/image_15.webp'), alt: 'Nutrição e brilho - corte chanel preto brilhante' },
+      { src: img('gallery/image_16.webp'), alt: 'Nutrição e brilho - cabelo castanho liso e brilhante' },
     ],
     delay: 'd1',
   },
@@ -68,12 +68,12 @@ const services: ServiceData[] = [
   },
   {
     id: 'svc-escova',
-    name: 'Escova & Tratamentos',
-    description: 'Escova perfeita e tratamentos que reconstroem de dentro para fora. Para quem quer fios saudáveis, macios e com brilho real.',
+    name: 'Escova & Hidratação',
+    description: 'Escova perfeita e hidratação que reconstrói de dentro para fora. Para quem quer fios saudáveis, macios e com brilho real.',
     images: [
-      { src: img('gallery/image_19.webp'), alt: 'Escova & Tratamentos' },
+      { src: img('gallery/image_19.webp'), alt: 'Escova & Hidratação' },
       { src: img('gallery/image_20.webp'), alt: 'Escova - cabelo morena iluminada' },
-      { src: img('gallery/Escova_Tratamentos_2.webp'), alt: 'Escova & Tratamentos - resultado' },
+      { src: img('gallery/Escova_Tratamentos_2.webp'), alt: 'Escova & Hidratação - resultado' },
     ],
     delay: 'd3',
   },

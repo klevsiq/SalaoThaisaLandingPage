@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     name: 'Ariane Santana',
     initial: 'A',
     meta: 'Cliente recorrente',
-    service: 'Tratamento Capilar',
+    service: 'Nutrição & Brilho',
     text: '"Atendimento incrível, profissional super cuidadosa e um espaço que dá vontade de voltar sempre."',
   },
   {
