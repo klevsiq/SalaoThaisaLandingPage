@@ -24,7 +24,7 @@ export default function Instagram() {
           Siga o perfil e fique por dentro das novidades do Studio.
         </p>
         <a
-          href="https://www.instagram.com/thacarolina.hair"
+          href="https://www.instagram.com/_thaisacarolina"
           target="_blank"
           rel="noopener noreferrer"
           className="ig-btn"
@@ -33,7 +33,7 @@ export default function Instagram() {
           Seguir no Instagram
         </a>
         <p className="ig-handle">
-          <strong>@thacarolina.hair</strong>
+          <strong>@_thaisacarolina</strong>
         </p>
       </div>
     </section>
