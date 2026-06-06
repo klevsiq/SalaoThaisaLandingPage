@@ -44,7 +44,7 @@ export default function Professional() {
               suas clientes.
             </p>
             <p>
-              Especializada em colorimetria, mechas e tratamentos capilares,
+              Especializada em colorimetria, mechas e cuidados capilares,
               mantém uma rotina de atualização com formações regulares e
               acompanha as referências internacionais da área.
             </p>

@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
     name: 'Nat Xavier',
     initial: 'N',
     meta: 'Cliente nova',
-    service: 'Alisamentos',
+    service: 'Liso Perfeito',
     text: '"A melhor progressiva que já fiz, deixou meu cabelo bem solto, não ficou artificial. Uma excelente profissional, super atenciosa, vale muito a pena."',
   },
   {

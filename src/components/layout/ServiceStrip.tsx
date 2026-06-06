@@ -7,7 +7,7 @@ interface StripProps {
 const items = [
   { href: '#svc-corte', label: 'Corte' },
   { href: '#svc-mechas', label: 'Loiros & Iluminados' },
-  { href: '#svc-alisamentos', label: 'Alisamentos' },
+  { href: '#svc-liso-perfeito', label: 'Liso Perfeito' },
   { href: '#svc-selagem', label: 'Selagem Capilar' },
   { href: '#svc-coloracao', label: 'Coloração & Correção de Cor' },
   { href: '#svc-escova', label: 'Escova & Tratamentos' },
