@@ -273,16 +273,12 @@ function ServiceCard({ svc, onOpen }: CardProps) {
 
 /* ── Services Section ── */
 export default function Services() {
-  const { ref: headerRef, inView: headerIn } = useInView<HTMLDivElement>()
   const [lightbox, setLightbox] = useState<{ images: ServiceImage[]; idx: number } | null>(null)
 
   return (
     <section className="services" id="servicos">
       <div className="services-inner">
-        <div
-          className={`svc-header reveal${headerIn ? ' on' : ''}`}
-          ref={headerRef}
-        >
+        <div className="svc-header">
           <div>
             <div className="eyebrow"><span>Serviços</span></div>
             <h2 className="sh">Transformações que<em> duram</em></h2>
