@@ -1,8 +1,7 @@
 import sharp from 'sharp'
 import { readdir, stat, writeFile, readFile } from 'fs/promises'
-import { join } from 'path'
+import { join, dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { dirname, resolve } from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const GALLERY_DIR = resolve(__dirname, '../public/assets/images/gallery')
