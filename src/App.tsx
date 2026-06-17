@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Navbar from '@/components/layout/Navbar'
 import ServiceStrip from '@/components/layout/ServiceStrip'
 import Footer from '@/components/layout/Footer'
@@ -25,6 +25,17 @@ export default function App() {
     document.documentElement.style.setProperty('--strip-h', `${h}px`)
     document.documentElement.style.setProperty('--header-h', `${navH + h}px`)
   }, [navH])
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1)
+    if (!hash) return
+    const el = document.getElementById(hash)
+    if (!el) return
+    const timer = setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }, 120)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <>
