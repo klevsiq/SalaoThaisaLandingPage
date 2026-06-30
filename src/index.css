@@ -1470,10 +1470,10 @@ button:focus-visible,
 
 @media (max-width: 600px) {
   body { font-size: 1.05rem; }
-  /* Hero: centraliza texto e ações no mobile */
-  .hero-content { text-align: center; }
+  /* Hero: alinhado à esquerda no mobile */
+  .hero-content { text-align: left; }
   .hero-sub { max-width: 100%; }
-  .hero-actions { flex-direction: column; align-items: center; justify-content: center; gap: 14px; margin-top: 28px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 14px; margin-top: 28px; }
   .hero-sec-link { font-size: 0.8rem; }
   /* Eyebrows: centraliza em todas as seções */
   .eyebrow { justify-content: center; }
@@ -1568,6 +1568,8 @@ button:focus-visible,
   .t-nav-btn { width: 44px; height: 44px; }
   .loc-col-val { font-size: 1rem; line-height: 1.85; }
   .loc-col-val small { font-size: 0.9rem; }
+  /* Mapa: margem lateral para mostrar as bordas arredondadas */
+  .loc-map-wrap { width: auto; margin-left: 5%; margin-right: 5%; }
   /* Sobre: centraliza cabeçalho, texto e itens da lista */
   .about-header { text-align: center; }
   .about-text-panel { text-align: center; }
@@ -1595,8 +1597,9 @@ button:focus-visible,
   .lb-prev { left: 8px; width: 44px; height: 44px; }
   .lb-next { right: 8px; width: 44px; height: 44px; }
   .lb-dots { bottom: 14px; }
-  .cta-urgency { flex-direction: column; gap: 8px; font-size: 0.55rem; letter-spacing: 0.1em; padding: 0 16px; margin-top: 22px; }
-  .cta-urgency .cu-line { white-space: normal; max-width: 100%; }
+  .cta-urgency { flex-direction: column; gap: 7px; font-size: 0.7rem !important; letter-spacing: 0.05em; padding: 0 16px; margin-top: 22px; }
+  .cta-urgency .cu-line { white-space: normal; max-width: 100%; padding: 7px 16px; gap: 6px; }
+  .cta-urgency .cu-line::before { font-size: 0.78rem; }
 }
 
 @media (max-width: 400px) {
