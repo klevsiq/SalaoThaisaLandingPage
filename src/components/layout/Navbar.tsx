@@ -63,6 +63,8 @@ export default function Navbar({ onHeightChange }: NavbarProps) {
 
       </nav>
 
+      {menuOpen && <div className="mobile-nav-backdrop" onClick={closeMenu} />}
+
       <div
         className={`mobile-nav${menuOpen ? ' open' : ''}`}
         role="dialog"

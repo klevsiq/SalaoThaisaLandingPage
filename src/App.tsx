@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect } from 'react'
 import Navbar from '@/components/layout/Navbar'
-import ServiceStrip from '@/components/layout/ServiceStrip'
 import Footer from '@/components/layout/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import Hero from '@/components/sections/Hero'
@@ -14,17 +13,10 @@ import CTABand from '@/components/sections/CTABand'
 import Location from '@/components/sections/Location'
 
 export default function App() {
-  const [navH, setNavH] = useState(0)
-
   const handleNavHeight = useCallback((h: number) => {
-    setNavH(h)
     document.documentElement.style.setProperty('--nav-h', `${h}px`)
+    document.documentElement.style.setProperty('--header-h', `${h}px`)
   }, [])
-
-  const handleStripHeight = useCallback((h: number) => {
-    document.documentElement.style.setProperty('--strip-h', `${h}px`)
-    document.documentElement.style.setProperty('--header-h', `${navH + h}px`)
-  }, [navH])
 
   useEffect(() => {
     const hash = window.location.hash.slice(1)
@@ -40,16 +32,15 @@ export default function App() {
   return (
     <>
       <Navbar onHeightChange={handleNavHeight} />
-      <ServiceStrip onHeightChange={handleStripHeight} />
       <main>
         <Hero />
         <Services />
+        <Instagram />
         <Professional />
         <Testimonials />
         <CTABand />
         <About />
         <Products />
-        <Instagram />
         <Location />
       </main>
       <Footer />

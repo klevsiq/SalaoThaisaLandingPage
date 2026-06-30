@@ -37,17 +37,17 @@ index.html                    — entrada do Vite (Analytics, Pixel, Schema.org,
 public/
   assets/images/gallery/      — fotos dos serviços (.webp)
   assets/images/logos/        — logos de marcas (Mirra, Wella, Truss) (.png)
-  favicon.svg                 — ícone "T" dourado
+  favicon.svg                 — ícone "T" rosa (paleta Rosé Cream)
   sitemap.xml                 — sitemap para indexação do Google
   CNAME                       — domínio customizado thacarolina.com.br
 src/
-  App.tsx                     — raiz: monta seções, gerencia --nav-h / --strip-h / --header-h
+  App.tsx                     — raiz: monta seções, gerencia --nav-h / --header-h
   index.css                   — design system global (Tailwind base + CSS vars + estilos)
   main.tsx                    — entry point React
   lib/utils.ts                — função img() para URLs de imagens
   hooks/useInView.ts          — IntersectionObserver para animações reveal
   components/
-    layout/  Navbar · ServiceStrip · Footer
+    layout/  Navbar · Footer
     sections/ Hero · Services · Professional · Testimonials · CTABand
               About · Products · Instagram · Location
     WhatsAppFloat.tsx
@@ -58,7 +58,6 @@ src/
 | Componente | id | Descrição |
 |---|---|---|
 | Navbar | `#nav` | Menu hambúrguer mobile |
-| ServiceStrip | — | Faixa de nav por serviço |
 | Hero | `#hero` | Tela inicial + SVG animado |
 | Services | `#servicos` | Cards com slider de fotos e lightbox |
 | Professional | `#profissional` | Seção da Thaisa Carolina |
@@ -71,12 +70,21 @@ src/
 
 ### Design tokens (`:root` em `index.css`)
 
+**Tema atual: Rosé Cream** (paleta clara, v2) — creme/bege claro + rosa empoeirado + marrom quente, inspirada no logo. Tipografia editorial Cormorant Garamond + Montserrat.
+
+> ⚠️ Os nomes das variáveis foram mantidos do tema anterior (Noir Doré, escuro). Por isso os nomes **não correspondem mais** aos valores: `--ink` agora é fundo claro, `--cream` agora é texto escuro e `--gold` agora é rosa.
+
 | Variável | Valor | Uso |
 |---|---|---|
-| `--ink` | `#0b0906` | Fundo principal |
-| `--gold` | `#c4a35a` | Dourado (destaques, bordas) |
-| `--gold2` | `#e2cea0` | Dourado claro |
-| `--cream` | `#f7f1e8` | Texto principal |
+| `--ink` | `#f6f0ea` | Fundo principal (claro) |
+| `--ink2` | `#ede3dc` | Seções alternadas |
+| `--ink3` | `#e4d7cc` | Cards / superfícies elevadas |
+| `--gold` | `#c99aa4` | Accent principal — rosa empoeirado (destaques, bordas) |
+| `--gold2` | `#e5c6cc` | Accent claro — rosa suave |
+| `--gold-dim` | `rgba(201,154,164,0.16)` | Rosa translúcido (fundos sutis) |
+| `--rose` | `#8a6a52` | Segundo accent — marrom quente do logo |
+| `--cream` | `#2d231f` | Texto principal — marrom bem escuro |
+| `--off` | `#5d4f47` | Texto secundário / muted |
 | `--serif` | Cormorant Garamond | Títulos editoriais |
 | `--sans` | Montserrat | Corpo de texto |
 
