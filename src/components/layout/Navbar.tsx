@@ -1,11 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { trackWhatsApp } from '@/lib/utils'
 
-declare const gtag: (...args: unknown[]) => void
-const trackWA = () => {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: 'navbar' })
-  }
-}
+const trackWA = () => trackWhatsApp('navbar')
 
 interface NavbarProps {
   onHeightChange: (h: number) => void

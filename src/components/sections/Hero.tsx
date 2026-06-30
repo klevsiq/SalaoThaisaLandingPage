@@ -1,12 +1,8 @@
-declare const gtag: (...args: unknown[]) => void
+import { trackWhatsApp } from '@/lib/utils'
 
 const WA_URL = 'https://wa.me/5511947195729?text=Ol%C3%A1!%20Vim%20do%20site%20e%20quero%20agendar!'
 
-const trackWA = () => {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: 'hero' })
-  }
-}
+const trackWA = () => trackWhatsApp('hero')
 
 const WppIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

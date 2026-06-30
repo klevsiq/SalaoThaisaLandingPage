@@ -1,11 +1,7 @@
-declare const gtag: (...args: unknown[]) => void
+import { trackWhatsApp } from '@/lib/utils'
 
 export default function WhatsAppFloat() {
-  const handleClick = () => {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: 'float' })
-    }
-  }
+  const handleClick = () => trackWhatsApp('float')
 
   return (
     <a
