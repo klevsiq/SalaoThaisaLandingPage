@@ -1,5 +1,8 @@
 # Como usar o Claude Code no projeto
 
+> **Site atual:** tema **Rosé Cream** (visual claro — creme + rosa), no ar em https://thacarolina.com.br
+> **Pasta de produção:** `E:\ClaudeCode\SalaoThaisaLandingPage` (é essa que faz o deploy)
+
 ## Para fazer alterações no site
 
 ### Opção 1 — Você mesmo edita
@@ -37,11 +40,18 @@
 - Nome: **Tha Carolina Hair Studio**
 - URL: `thacarolina.com.br`
 - Pasta local: `E:\ClaudeCode\SalaoThaisaLandingPage`
+- Repositório: `github.com/klevsiq/SalaoThaisaLandingPage` (branch `v2` = produção)
 - Onde ficam as fotos, textos, cores e componentes
 - Como fazer o deploy
-- Todas as integrações ativas (Analytics, Pixel, Schema.org)
+- Todas as integrações ativas (Analytics, Google Ads, Pixel, Schema.org)
 
 Não precisa explicar nada — é só pedir.
+
+---
+
+## Segurança: como voltar atrás
+
+Existe um **backup da versão anterior** salvo no GitHub (branch `backup-prod-2026-06-30`) e um `.zip` em `E:\ClaudeCode\_backups\`. Se algo sair errado, peça ao Claude para *"reverter o site para o backup"* — ele cuida disso.
 
 ---
 
@@ -55,3 +65,5 @@ Não precisa explicar nada — é só pedir.
 | Endereço e horários | `src/components/sections/Location.tsx` |
 | Depoimentos | `src/components/sections/Testimonials.tsx` |
 | Cores e fontes | `src/index.css` bloco `:root` |
+
+> **Sobre as cores:** o rosa claro (`--gold`) é só para fundos/bordas. Texto e ícones em rosa usam o rosa escuro (`--accent-deep`), que tem bom contraste e legibilidade. Detalhes no `CLAUDE.md`.
