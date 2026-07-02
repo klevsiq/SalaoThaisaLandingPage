@@ -43,18 +43,10 @@ const services: ServiceData[] = [
       { src: img('gallery/image_14.webp'), alt: 'Liso Perfeito - cabelo liso e brilhante' },
       { src: img('gallery/progressiva_2.webp'), alt: 'Liso Perfeito - resultado liso' },
       { src: img('gallery/progressiva_3.webp'), alt: 'Liso Perfeito - fios lisos e brilhantes' },
+      { src: img('gallery/image_20.webp'), alt: 'Liso Perfeito - morena iluminada' },
+      { src: img('gallery/Escova_Tratamentos_2.webp'), alt: 'Liso Perfeito - resultado liso e brilhante' },
     ],
     delay: 'd3',
-  },
-  {
-    id: 'svc-selagem',
-    name: 'Nutrição & Brilho',
-    description: 'Cabelo danificado tem solução. Recuperação intensa, hidratação profunda e resultado visível desde a primeira sessão.',
-    images: [
-      { src: img('gallery/image_15.webp'), alt: 'Nutrição e brilho - corte chanel preto brilhante' },
-      { src: img('gallery/image_16.webp'), alt: 'Nutrição e brilho - cabelo castanho liso e brilhante' },
-    ],
-    delay: 'd1',
   },
   {
     id: 'svc-coloracao',
@@ -65,17 +57,6 @@ const services: ServiceData[] = [
       { src: img('gallery/image_18.webp'), alt: 'Correção de cor castanho acobreado' },
     ],
     delay: 'd2',
-  },
-  {
-    id: 'svc-escova',
-    name: 'Escova & Hidratação',
-    description: 'Escova perfeita e hidratação que reconstrói de dentro para fora. Para quem quer fios saudáveis, macios e com brilho real.',
-    images: [
-      { src: img('gallery/image_19.webp'), alt: 'Escova & Hidratação' },
-      { src: img('gallery/image_20.webp'), alt: 'Escova - cabelo morena iluminada' },
-      { src: img('gallery/Escova_Tratamentos_2.webp'), alt: 'Escova & Hidratação - resultado' },
-    ],
-    delay: 'd3',
   },
 ]
 
